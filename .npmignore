@@ -1,4 +1,5 @@
-.*
+.gitignore
+.nvmrc
 tsconfig.json
 webpack.config.js
 yarn.lock
