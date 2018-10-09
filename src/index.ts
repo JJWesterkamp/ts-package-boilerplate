@@ -2,5 +2,9 @@ import PublicInterface from "../interface";
 
 import IStatic = PublicInterface.Static;
 
-const defaultNamespace: IStatic = {};
+// IStatic should be implemented by named exports:
+export function staticMethod() { return 0; }
+
+// IStatic should be implemented by default export as well:
+const defaultNamespace: IStatic = { staticMethod };
 export default defaultNamespace;

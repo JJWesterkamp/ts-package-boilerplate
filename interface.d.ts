@@ -5,6 +5,8 @@ export as namespace PackageName;
 declare namespace PackageName {
 
     interface Static {
-        // Package static side
+        staticMethod(): void;
     }
+
+    // Public object interfaces go here
 }
