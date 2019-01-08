@@ -8,7 +8,7 @@
   "license": "MIT",
   "main": "./cjs/index.js",
   "module": "./esm/index.js",
-  "types": "./interface.d.ts",
+  "types": "./package-name.d.ts",
   "scripts": {
     "dev": "run-p \"build:** -- --watch\"",
     "build": "run-p build:**",
