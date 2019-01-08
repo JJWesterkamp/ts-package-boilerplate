@@ -18,7 +18,9 @@ Uses a declaration file pointed to by `package.json`. The interfaces declared th
 
 ### Testing framework all set-up
 
-By default a Karma configuration is included. The boilerplate also installs Mocha, Chai and Sinon, and their respective type declarations. The Karma configuration uses `ChromeHeadless` as testing environment.
+By default a Karma configuration is included. The boilerplate also installs Mocha, Chai and Sinon, and their respective type declarations. The Karma configuration uses `ChromeHeadless` as testing environment. Code coverage is measured over the `src` folder, and reported into the (ignored) `coverage` folder.
+
+Note: The boilerplate assumes usage of TravisCI and Coveralls as CI environment - also by personal preference. See `karma.conf.js` for details. The coveralls reporter must be disabled if you do not use coveralls, otherwise testing processes might fail.
 
 ## Setup
 
