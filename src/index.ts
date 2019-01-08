@@ -1,4 +1,4 @@
-import PublicInterface from "../interface";
+import PublicInterface from '../package-name';
 
 import IStatic = PublicInterface.Static;
 
