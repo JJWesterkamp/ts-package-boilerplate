@@ -1,10 +1,8 @@
-import PublicInterface from '../package-name';
+import type { Foo } from '../package-name';
 
-import IStatic = PublicInterface.Static;
+export function staticMethod() {
 
-// IStatic should be implemented by named exports:
-export function staticMethod() { return 0; }
+ }
 
-// IStatic should be implemented by default export as well:
-const defaultNamespace: IStatic = { staticMethod };
-export default defaultNamespace;
+const foo: Foo = { staticMethod }
+export default foo

@@ -2,6 +2,6 @@ node_modules
 esm
 cjs
 umd
+coverage
 .idea
 .vscode
-coverage
