@@ -9,14 +9,21 @@
   "main": "./cjs/index.js",
   "module": "./esm/index.js",
   "types": "./package-name.d.ts",
+  "exports": {
+    ".": {
+      "require": "./cjs/index.js",
+      "import": "./esm/index.js",
+      "default": "./esm/index.js"
+    }
+  },
   "scripts": {
     "clean:dist": "rm -rf cjs esm umd",
     "clean:docs": "rm -rf docs",
     "clean:coverage": "rm -rf coverage",
     "dev": "run-p \"build:** -- --watch\"",
     "build": "npm run clean:dist && run-p build:**",
-    "build:cjs": "tsc --sourceMap false",
-    "build:esm": "tsc -m es6 --outDir esm --sourceMap false",
+    "build:cjs": "tsc --outDir cjs --sourceMap false -m CommonJS",
+    "build:esm": "tsc --outDir esm --sourceMap false -m es2015",
     "build:umd": "webpack",
     "docs": "typedoc package-name.d.ts",
     "bump": "npx yarn version --new-version",
@@ -26,7 +33,7 @@
     "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "devDependencies": {
-    "@jjwesterkamp/typedoc-theme": "^1.0.0",
+    "@jjwesterkamp/typedoc-theme": "^1.2.0",
     "@types/jest": "^26.0.15",
     "@types/jsdom": "^16.2.5",
     "@types/webpack-env": "^1.15.3",
@@ -35,10 +42,9 @@
     "jsdom": "^16.4.0",
     "npm-run-all": "^4.1.5",
     "ts-jest": "^26.4.4",
-    "ts-loader": "^8.0.11",
+    "ts-loader": "^9.1.2",
     "typedoc": "^0.20.34",
     "typescript": "^4.2",
-    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^5.4.0",
     "webpack-cli": "^4.2.0"
   }

@@ -1,6 +1,6 @@
-import type { Foo } from '../package-name';
+import type { Foo } from '../package-name'
 
-export function staticMethod() {
+function staticMethod() {
 
  }
 
